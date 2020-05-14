@@ -18,8 +18,10 @@
   <script>
     window.$docsify = {
       alias: {
+		  '/JavaGuide/_sidebar.md':
+			  'https://raw.githubusercontent.com/daichangya/JavaGuide/master/_sidebar.md',
 		  '/(.*)':
-			  'https://raw.githubusercontent.com/daichangya/JavaGuide/master/$1',
+			  'https://raw.githubusercontent.com/daichangya/JavaGuide/master/$1'
       },
       name: 'java面试指南',
       repo: 'https://github.com/daichangya/javaGuide',
@@ -60,6 +62,8 @@
                       + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
               })
           },
+          // DocsifyCodefund.create('fae1f9a4-870c-4c25-b8e0-c80464f7a95c')
+      ]
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
