@@ -1,11 +1,11 @@
 Spring Framework是一个开源Java平台.它为任何类型的部署平台上的基于Java的现代企业应用程序提供了全面的编程和配置模型.Spring框架最初由Rod Johnson编写，并于2003年6月根据Apache 2.0许可证首次发布.
 
 
-##### [Spring是什么？](#)
+##### Spring是什么？
 
 Spring是用于企业Java的开源开发框架.Spring Framework的核心功能可用于开发任何Java应用程序，但是在Java EE平台之上有一些用于构建Web应用程序的扩展.Spring框架旨在通过启用基于POJO的编程模型来使J2EE开发更易于使用并促进良好的编程实践.
 
-##### [Spring Framework的重要特征和优点是什么？](#)
+##### Spring Framework的重要特征和优点是什么？
 
 Spring框架建立在两个设计概念之上：依赖注入和面向切面的编程.
 
@@ -25,7 +25,7 @@ Spring框架建立在两个设计概念之上：依赖注入和面向切面的�
 *   Spring框架分为几个模块，它有助于我们保持应用程序的轻量级.例如，如果我们不需要Spring事务管理功能，则无需在项目中添加该依赖项.
 *   Spring框架支持大多数Java EE功能，甚至更多.它总是在新技术之上，例如，有一个Android的Spring项目可以帮助我们为本地android应用程序编写更好的代码.这使spring框架成为一个完整的软件包，我们不需要为不同的需求而使用不同的框架.
 
-##### [Spring框架中有哪些不同的模块？](#)
+##### Spring框架中有哪些不同的模块？
 
 以下是spring框架的模块：
 
@@ -43,20 +43,20 @@ Spring框架建立在两个设计概念之上：依赖注入和面向切面的�
 *   Web-Struts模块
 *   Web-Portlet模块
 
-##### [我们如何在Spring Framework中实现DI？](#)
+##### 我们如何在Spring Framework中实现DI？
 
 我们可以使用基于Spring XML以及基于注释的配置来在Spring应用程序中实现DI.
 
-##### [BeanFactory和ApplicationContext有什么区别？](#)
+##### BeanFactory和ApplicationContext有什么区别？
 
 BeanFactory是基本容器，而ApplicationContext是高级容器.ApplicationContext扩展了BeanFactory接口.与BeanFactory相比，ApplicationContext提供了更多功能，例如与spring AOP集成，用于i18n的消息资源处理等.
 
-##### [什么是BeanFactory？](#)
+##### 什么是BeanFactory？
 
 Bean Factory是spring框架的核心，它是一个轻量级容器，用于加载Bean定义并管理您的Bean.使用XML文件配置Bean，并管理单例定义的Bean.它还负责生命周期方法并注入依赖项.它还删除了临时的单例模式和工厂.
 
 
-##### [为什么需要Spring框架？](#)
+##### 为什么需要Spring框架？
 
 需要Spring框架，因为它是–
 
@@ -65,15 +65,15 @@ Bean Factory是spring框架的核心，它是一个轻量级容器，用于加�
 *   IOC
 *   AOP
 
-##### [定义应用程序上下文模块？](#)
+##### 定义应用程序上下文模块？
 
 这是一个非常重要的模块，并提供各种必要的服务，例如EJB集成，远程处理，JNDI访问和调度.它将spring转换为框架.它还通过应用生命周期事件来扩展BeanFactory的概念，为国际化消息和验证提供支持.
 
-##### [什么是自动装配？](#)
+##### 什么是自动装配？
 
 自动装配用于在协作bean之间建立关系.Spring容器可以自动解析合作者的bean.
 
-##### [自动装配有哪些不同的模式？](#)
+##### 自动装配有哪些不同的模式？
 
 自动装配有五种不同的模式：
 
@@ -87,7 +87,7 @@ Bean Factory是spring框架的核心，它是一个轻量级容器，用于加�
 
 **自动检测：** 允许Spring从byType或构造函数中选择自动装配
 
-##### [Bean生命周期的方法有哪些？](#)
+##### Bean生命周期的方法有哪些？
 
 Bean生命周期有两种重要的方法：
 
@@ -95,7 +95,7 @@ Bean生命周期有两种重要的方法：
 
 将bean卸载到容器中时调用拆解
 
-##### [侦听器的事件有哪些不同类型？](#)
+##### 侦听器的事件有哪些不同类型？
 
 以下是侦听器的不同事件类型：
 
@@ -103,13 +103,13 @@ Bean生命周期有两种重要的方法：
 *   ContextRefreshedEvent –初始化或刷新上下文时调用此事件
 *   RequestHandledEvent –当Web上下文处理请求时调用此事件
 
-##### [什么是Joinpoint？](#)
+##### 什么是Joinpoint？
 
 可以在应用程序中引入切面的点称为Joinpoint.这一点可能是修改字段，调用方法甚至引发异常.此时，可以添加新方面的代码以向应用程序引入新行为.
 
 此时可以将Aspect代码插入正常的应用程序流程中以更改当前行为.
 
-##### [AOP中的建议类型是什么？](#)
+##### AOP中的建议类型是什么？
 
 Spring AOP中有5种建议.
 
@@ -119,7 +119,7 @@ Spring AOP中有5种建议.
 4.  Throws Advice
 5.  Around Advice
 
-##### [命名一些重要的Spring模块？](#)
+##### 命名一些重要的Spring模块？
 
 一些重要的Spring Framework模块是：
 
@@ -137,7 +137,7 @@ Spring Web Module –用于创建Web应用程序.
 
 Spring MVC –用于创建Web应用程序，Web服务等的Model-View-Controller实现.
 
-##### [在AOP中定义Aspect, Advice, Pointcut, JointPoint and Advice Arguments？](#)
+##### 在AOP中定义Aspect, Advice, Pointcut, JointPoint and Advice Arguments？
 
 **Aspect：** Aspect是实现跨领域关注点的类，例如事务管理.Aspects可以是配置的普通类，然后在Spring Bean配置文件中进行配置，或者我们可以使用Spring AspectJ支持使用@Aspect批注将类声明为Aspect.
 
@@ -149,7 +149,7 @@ Spring MVC –用于创建Web应用程序，Web服务等的Model-View-Controller
 
 **Advice Arguments：** 我们可以在Advice方法中传递参数.我们可以在切入点中使用args（）表达式，以将其应用于与参数模式匹配的任何方法.如果使用此选项，则需要在确定参数类型的建议方法中使用相同的名称.
 
-##### [Spring Bean有哪些不同作用域？](#)
+##### Spring Bean有哪些不同作用域？
 
 Spring Bean定义了五个作用域.
 
@@ -163,7 +163,7 @@ Spring Bean定义了五个作用域.
 
 **Global-session**：这用于为Portlet应用程序创建全局会话Bean.
 
-##### [如何在Spring MVC Framework中处理异常？](#)
+##### 如何在Spring MVC Framework中处理异常？
 
 Spring MVC Framework提供了以下方法来帮助我们实现可靠的异常处理.
 

@@ -1089,7 +1089,7 @@ OutputStream是java.io包的抽象类.它是父级中与输入有关的所有子
 
 Java中有关JDK，JRE和JVM的详细信息如下：
 
-### Java开发套件（JDK）
+##### Java开发套件（JDK）
 
 Java SE，Jakarta EE或Java Me是平台，其实现由Java开发工具包完成.JDK的基本内容是Java应用程序和JVM的资源.下面列出了一些JDK编程工具：
 
@@ -1099,7 +1099,7 @@ Java SE，Jakarta EE或Java Me是平台，其实现由Java开发工具包完成.
 4.  JConsole-这是一个图形管理工具.
 5.  jstack-打印Java线程的堆栈跟踪
 
-### Java运行时环境（JRE）
+##### Java运行时环境（JRE）
 
 Java运行时环境由Java虚拟机组成，支持文件和核心类.这基本上是执行Java应用程序的最低要求.JRE实际上是JDK的一个组件，但可以与其他组件分开下载.
 
@@ -1111,7 +1111,7 @@ JRE的某些组件如下所示：
 4.  Lang和Util基本库，例如Zip，Collections，Versioning等.
 5.  部署技巧
 
-### Java虚拟机（JVM）
+##### Java虚拟机（JVM）
 
 Java虚拟机允许计算机运行Java程序.它还可以运行其他语言的程序，这些程序事先已编译为Java字节码.JVM是虚拟机.
 

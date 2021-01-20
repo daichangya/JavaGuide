@@ -1,9 +1,9 @@
 
-##### [什么是Spring Boot？](#)
+##### 什么是Spring Boot？
 
 Spring Boot是一个开放源代码的轻量级框架，用于开发基于Java的应用程序.它建立在Spring之上的.它是由Pivotal团队开发和维护的.它主要用于Web和命令行应用程序.它会自动配置所有功能，您只需单击一下即可运行该应用程序.
 
-##### [spring Framework和Spring Boot有什么区别？](#)
+##### spring Framework和Spring Boot有什么区别？
 
 Spring框架是用于构建应用程序的最广泛使用的 Java框架.spring框架的主要特征是依赖注入.通过允许我们开发松耦合应用程序，它可以使事情变得更简单.
 
@@ -11,7 +11,7 @@ Spring框架是用于构建应用程序的最广泛使用的 Java框架.spring�
 
 主要区别在于：spring框架为开发应用程序使用了几种配置.Spring Boot允许使用预定义的类路径进行自动配置.
 
-##### [Spring Boot的功能是什么？](#)
+##### Spring Boot的功能是什么？
 
 *   主要功能是自动配置
 *   Spring Boot CLI
@@ -27,7 +27,7 @@ Spring框架是用于构建应用程序的最广泛使用的 Java框架.spring�
 *   Logging files
 *   Spring Applications
 
-##### [Spring Boot的最低系统要求是什么？](#)
+##### Spring Boot的最低系统要求是什么？
 
 **Java最新版本**
 
@@ -48,14 +48,14 @@ Spring Boot 2.X将不再支持Java 7或更低版​​本，最低要求是Java 
 *   Jetty9.4-servletv3.1
 *   Underflow 2.0-servletv 4.0
 
-##### [什么是Spring Boot关键组件？](#)
+##### 什么是Spring Boot关键组件？
 
 *   Spring Boot Auto Configuration
 *   Spring Boot CLI
 *   Spring Boot Starter POMs
 *   Spring Boot Actuator
 
-##### [Spring boot模块的启动器有哪些依赖性？](#)
+##### Spring boot模块的启动器有哪些依赖性？
 
 Spring Boot模块提供了许多启动器依赖项.这里，一些最常用的是：
 
@@ -67,11 +67,11 @@ Spring Boot模块提供了许多启动器依赖项.这里，一些最常用的�
 *   Mail starter
 *   Thymeleaf starter
 
-##### [什么是Spring Boot Actuator？](#)
+##### 什么是Spring Boot Actuator？
 
 Actuator是Spring Boot的子项目.它提供了多个端点来监视和管理您的应用程序.它通过提供内置端点来实现，但是您也可以构建自己的端点.还提供了访问生产就绪REST点并从Web提取所有信息的简便方法.通过Actuator，只需极少的配置即可轻松地将您的应用程序与任何外部系统集成.
 
-##### [如何启用Spring Boot Actuator？](#)
+##### 如何启用Spring Boot Actuator？
 
 在现有的POM.XML文件中检查以下Maven依赖关系：
 
@@ -82,11 +82,11 @@ Actuator是Spring Boot的子项目.它提供了多个端点来监视和管理您
 </dependency>
 ```
 
-##### [什么是Spring Boot CLI？](#)
+##### 什么是Spring Boot CLI？
 
 Spring Boot CLI是用于Spring Boot应用程序的命令行界面工具.它使用Groovy脚本，它是用于创建/管理应用程序的强大工具.
 
-##### [列出Spring Boot CLI命令？](#)
+##### 列出Spring Boot CLI命令？
 
 *   _\-run command_
 *   _\-test command_
@@ -99,7 +99,7 @@ Spring Boot CLI是用于Spring Boot应用程序的命令行界面工具.它使�
 *   _\-shell command_
 *   _\-help command_
 
-##### [常见的Spring Boot注释是什么？](#)
+##### 常见的Spring Boot注释是什么？
 
 一些常见的Spring Boot注释是：
 
@@ -122,7 +122,7 @@ Spring Boot CLI是用于Spring Boot应用程序的命令行界面工具.它使�
 *   .@ ConditionalOnExpression
 *   @ConditionalOnCloudPlatform
 
-##### [最常用的Spring Actuator End Points是什么？](#)
+##### 最常用的Spring Actuator End Points是什么？
 
 **_/ beans：_**返回应用程序中所有spring bean的完整列表
 
@@ -142,12 +142,12 @@ Spring Boot CLI是用于Spring Boot应用程序的命令行界面工具.它使�
 
 **_/ metrics：_**显示指标信息，例如：JVM，系统CPU，openfiles
 
-##### [Spring Boot中Relaxed Binding的用途是什么？](#)
+##### Spring Boot中Relaxed Binding的用途是什么？
 
 Spring Boot使用一些宽松的规则将环境属性绑定到@configuartionproperties bean，因此环境属性名称和bean属性名称之间不需要完全匹配.
 
 
-##### [如何在Spring Boot中添加自定义JS代码？](#)
+##### 如何在Spring Boot中添加自定义JS代码？
 
 在Spring Boot中，首先在resources文件夹下创建一个名为static的文件夹.您可以将静态内容放入该文件夹.
 
@@ -157,11 +157,11 @@ Spring Boot使用一些宽松的规则将环境属性绑定到@configuartionprop
 
 _<script src =” / js / interviewgigapp.js”> </ script>_
 
-##### [您能解释一下Spring Boot中的自动配置吗？](#)
+##### 您能解释一下Spring Boot中的自动配置吗？
 
 自动配置是一项重要功能，它可以基于类路径上的依赖关系（例如jar，bean，属性等）自动配置应用程序，而无需开发人员进行任何操作.Spring Boot自动配置会尝试根据添加的jar依赖关系自动配置Spring应用程序.
 
-##### [您能解释一下如何注册自定义自动配置吗？](#)
+##### 您能解释一下如何注册自定义自动配置吗？
 
 要注册自动配置类，我们必须_在META-INF / spring.factories文件中_的_EnableAutoConfiguration键下列出_其全限定名称_：=_
 
@@ -169,11 +169,11 @@ _org.springframework.boot.autoconfigure.EnableAutoConfiguration = com.baeldung.a
 
 如果我们使用Maven构建项目，则应将该文件放置在资源_/ META-INF目录中_，该_目录_最终将在打包阶段中提到的位置.
 
-##### [嵌入式容器和WAR有什么区别？](#)
+##### 嵌入式容器和WAR有什么区别？
 
 您可以在命令提示符下将JAR文件作为JAR文件运行spring boot应用程序，而无需设置Web服务器.但是要运行WAR文件，您需要设置一个具有servlet容器的Web服务器，例如Tomcat，underflow或Jetty，然后在其中部署WAR文件.
 
-##### [为什么我们使用Spring Boot Maven插件？](#)
+##### 为什么我们使用Spring Boot Maven插件？
 
 它是Spring Boot团队构建的Maven插件，可简化应用程序的打包.它提供了一些命令，使您可以将代码打包为半开或运行应用程序.该插件提供了使用Spring Boot应用程序的几个目标：
 
@@ -185,21 +185,21 @@ _**spring-boot：启动和停止：**_将您的Spring Boot应用程序集成到�
 
 _**spring-boot：build-info：**_生成供执行器使用的构建信息.
 
-##### [说明，如何在Spring Boot中启用HTTP / 2支持？](#)
+##### 说明，如何在Spring Boot中启用HTTP / 2支持？
 
 将以下属性添加到属性（或.yml）文件中：
 
 _Server.http2.enabled = true._
 
-##### [什么是Spring Boot Initilizr？](#)
+##### 什么是Spring Boot Initilizr？
 
 这是一个Spring Boot工具，可以非常轻松地引导Boot或Spring Applications.
 
-##### [什么是Spring Boot启动器？](#)
+##### 什么是Spring Boot启动器？
 
 入门程序仅仅是Gradle或Maven模块，其唯一目的是提供所有必要的依赖关系以“入门”特定功能.Spring Boot Starters使引导过程变得更加轻松和快捷.启动器为您带来了必需的Maven依赖关系以及一些预定义的配置位.
 
-##### [Spring Boot的优点是什么？](#)
+##### Spring Boot的优点是什么？
 
 *   Spring Boot的主要目的是降低LOC.
 *   它提供了许多默认配置，有助于更快地引导Spring应用程序.
@@ -210,27 +210,27 @@ _Server.http2.enabled = true._
 *   它提供了很多插件.
 *   它提供了CLI应用程序.
 
-##### [Spring Boot依赖管理的用途是什么？](#)
+##### Spring Boot依赖管理的用途是什么？
 
 它用于管理依赖关系并自动配置，而无需您为任何依赖关系指定版本.当我们更新Spring Boot版本时，Spring将以一致的方式自动升级所有依赖项.
 
-##### [Thymeleaf的用途是什么？](#)
+##### Thymeleaf的用途是什么？
 
 Thymeleaf是用于创建Web应用程序的基于Java的库之一.它提供了在Web应用程序中提供XHTML / HTML5的支持.它是spring框架的强大模板处理引擎.
 
-##### [Spring Boot Devtools有什么用？](#)
+##### Spring Boot Devtools有什么用？
 
 它提供了非常有用的工具集合，极大地改善了开发经验.如自动保存等.
 
-##### [Spring Data JPA的用途是什么？](#)
+##### Spring Data JPA的用途是什么？
 
 Spring Data JPA使实现基于JPA的存储库和构建使用数据访问技术的Spring供电的应用程序变得容易.
 
-##### [Spring Boot中的H2是什么？](#)
+##### Spring Boot中的H2是什么？
 
 H2是完全用Java创建的开源RDBM（理性数据库管理）系统.它可以嵌入在Java应用程序中，也可以在客户端服务器模式下运行.或它是可以在内存中运行的轻量级数据库.
 
-##### [什么是@SpringBootApplication批注？](#)
+##### 什么是@SpringBootApplication批注？
 
 **@SpringBootApplication**批注是以下三个spring批注的组合，并且仅用一行代码即可提供全部三个功能.
 
@@ -240,7 +240,7 @@ H2是完全用Java创建的开源RDBM（理性数据库管理）系统.它可以
 
 **@enableAutoconfiguration：**用于启用spring boot的自动配置功能.
 
-##### [解释一下，如何使用Spring Boot控制日志记录？](#)
+##### 解释一下，如何使用Spring Boot控制日志记录？
 
 我们可以通过在application.properties文件中指定日志级别来控制Spring Boot的日志记录.当该文件存在于类路径中时，Spring Boot会加载该文件，并且可用于配置Spring Boot和应用程序代码.
 
@@ -250,7 +250,7 @@ _logging.level.org.springframework =debug_
 
 _logging.level.com.demo =info_
 
-##### [为什么选择Spring Boot？](#)
+##### 为什么选择Spring Boot？
 
 *   Spring Boot是基于Java的应用程序框架.
 *   它避免了编写大量样板代码，注释和XML配置.
@@ -262,7 +262,7 @@ _logging.level.com.demo =info_
 *   它包括嵌入式servlet容器.
 *   它允许admin支持
 
-##### [您能解释一下如何启用调试日志记录吗？](#)
+##### 您能解释一下如何启用调试日志记录吗？
 
 首先，使用_–debug_开关启动应用程序.
 
@@ -270,7 +270,7 @@ _logging.level.com.demo =info_
 
 最后，在提供的日志配置文件中设置root logger的日志记录级别.
 
-##### [您能解释一下，如何运行和停止spring boot可执行jar？](#)
+##### 您能解释一下，如何运行和停止spring boot可执行jar？
 
 *   打开 cmd或shell窗口，并使用java -jar，如下所示_
 *    java -jar my project-0.0.1-SNAPSHOT.jar

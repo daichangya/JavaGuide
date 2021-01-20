@@ -1,4 +1,4 @@
-#### 1.Java是否使用指针？#### 
+#### 1.Java是否使用指针？
 
 不，Java并不完全使用指针.指针是将另一个变量的确切地址存储在其内存中的变量.由于其安全性和健壮性的特点，Java避开了指针这一概念，而指针是内存寻址中C和C ++的主要组成部分.
 
@@ -12,7 +12,7 @@
 *   无法分配地址
 *   不能设置为指向没有对象的变量
 
-#### 2.用Java显示当年的最后两位数字#### 
+#### 2.用Java显示当年的最后两位数字
 
 要显示当前年份的最后两位数字，请使用日期字符y，如以下示例所示：
 ```
@@ -28,7 +28,7 @@ public class Example {
 
 Two-digit Year = 20
 ```
-#### 3.检查字符串是否以特定的子字符串开头#### 
+#### 3.检查字符串是否以特定的子字符串开头
 
 startsWith（）方法用于检查字符串是否以特定字符串开头.
 
@@ -51,7 +51,7 @@ public class Example {
 Begins with the specified word!
 ```
 
-#### 4.Java中局部变量的默认值？#### 
+#### 4.Java中局部变量的默认值？
 
 Java中的局部变量是在方法，代码块，构造函数等中局部声明的变量.当程序控件输入方法，代码块，构造函数等时，则创建局部变量，并且当程序控件离开方法，代码块，构造函数时等等，然后销毁局部变量.
 
@@ -96,7 +96,7 @@ public class Demo
 The number is : 50
 ```
 
-#### 5.Java中的Collections API#### 
+#### 5.Java中的Collections API
 
 可以使用Java的Collections API提供的体系结构来存储和操作一组对象.可以使用Java集合执行Java中所有可能的操作，例如搜索，排序，删除，插入等.
 
@@ -112,27 +112,27 @@ Java中的Collections API的一些特征如下：
 4.  一些集合可能使用哈希表来存储元素.这些表包含它们存储的所有元素的特定键.
 5.  一些集合可能使用树来存储元素.基于树的存储对于存储元素非常有用.
 
-#### 6 Java中的标记接口#### 
+#### 6 Java中的标记接口
 
 不包含任何字段或方法的空接口称为标记接口.标记器接口的实际示例是Serializable接口，Cloneable接口和Remote接口.这些接口的详细信息如下：
 
-### 可序列化的接口
+##### 可序列化的接口
 
 可序列化的接口使对象有资格将其状态保存在文件中.该接口存储在java.io包中.未实现可序列化接口的类未对其状态进行序列化或反序列化.
 
-### 可克隆的接口
+##### 可克隆的接口
 
 可克隆接口由一个类实现，该类指示允许Object类中的clone（）方法对类实例进行字段到字段的复制.java.lang软件包包含可克隆的接口.
 
 如果为没有可克隆接口的实现的类调用clone（）方法，则抛出CloneNotSupportedException异常.具有此接口的实现的类通常会按惯例覆盖Object.clone（）方法.
 
-### 远端介面
+##### 远端介面
 
 存储在计算机上并且可以从另一台计算机访问的对象称为远程对象.需要远程接口来标记对象并将其转换为远程对象.java.rmi软件包包含远程接口.
 
 可以使用非本地虚拟机调用其方法的接口也可以由远程接口标识.同样，远程方法调用（RMI）具有一些方便类，可以使用远程对象实现来扩展这些方便类，这些便利类有助于创建远程对象.
 
-#### 7 Java异常处理的最佳实践#### 
+#### 7 Java异常处理的最佳实践
 
 异常处理是处理计算过程中异常发生的过程.Java中异常处理的一些最佳实践如下：
 
@@ -169,7 +169,7 @@ Java中的Collections API的一些特征如下：
 不要记录并重新抛出异常，因为它会导致同一异常的多个错误消息.这些额外的错误消息非常有用，因为它们不提供任何额外的信息.如果需要任何其他信息，则应捕获异常并将其包装在定制的异常中.
 
 
-#### 8.Java中的线程需求#### 
+#### 8.Java中的线程需求
 
 Java中的线程有助于在程序中实现并行性.这意味着可以使用多线程同时执行多个操作.
 
@@ -193,7 +193,7 @@ Java中的线程有助于在程序中实现并行性.这意味着可以使用多
 
 线程可用于充分利用CPU的能力并增加系统的吞吐量.如果CPU有多个内核，则需要多个线程在这些内核上并行运行以优化系统性能.
 
-#### 9.Java中的线程优先级#### 
+#### 9.Java中的线程优先级
 
 在多线程中，每个线程都被分配一个优先级.调度程序根据优先级将处理器分配给线程，即，优先级最高的线程首先分配给处理器，依此类推.
 
@@ -242,7 +242,7 @@ New thread priority of thread1: 8
 New thread priority of thread2: 3
 New thread priority of thread3: 6
 ```
-#### 10.Java中的内存管理#### 
+#### 10.Java中的内存管理
 
 内存管理是Java的重要组成部分，理解它非常重要.Java中的内存分为两个主要部分，堆栈和堆.演示此过程的图如下所示：
 
@@ -250,44 +250,42 @@ New thread priority of thread3: 6
 
 Java中有关堆栈和堆内存的详细信息如下：
 
-### Java中的堆栈内存
+##### Java中的堆栈内存
 
 Java中的堆栈内存用于线程执行.特定值存储在线程堆栈中，这些值在短时间内可用.同样，堆栈存储器可能包含对从堆存储器中的方法引用的对象的数据引用.
 
 线程堆栈内存中的顺序为后进先出（LIFO）.调用该方法时，会在堆栈存储器中为所有原始值和对该方法中其他对象的引用创建一个块.方法结束后，堆栈存储器中的存储块将释放，并且可以由另一种方法使用.
 
-### Java中的堆内存
+##### Java中的堆内存
 
 Java中的堆内存是Java运行时分配给Objects和JRE类的内存.应用程序中的所有对象都在堆内存中创建.堆内存中的对象可从应用程序中的任何位置全局访问，因此它们对于整个应用程序执行都有生命周期.
 
 
-#### 11 super vs this#### 
+#### 11 super vs this
 
 super和this都是Java中的关键字.有关这些的详细信息如下：
 
-### super关键字
+##### super关键字
 
 super关键字是Java中的保留关键字，用于引用直接父类.super关键字还可以调用直接父类的方法和构造函数.
 
 给出了一个演示super关键字的程序，如下所示：
 ```
-class A
-{
-   int x = 26;
-   static int y = 15;
+class A {
+    int x = 26;
+    static int y = 15;
 }
-public class B extends A
-{
-   void display()
-   {
-       System.out.println(super.x);
-       System.out.println(super.y);
-   }
-   public static void main(String[] args)
-   {
-       B obj = new B();
-       obj.display();
-   }
+
+public class B extends A {
+    void display() {
+        System.out.println(super.x);
+        System.out.println(super.y);
+    }
+
+    public static void main(String[] args) {
+        B obj = new B();
+        obj.display();
+    }
 }
 
 **上面程序的输出如下：**
@@ -295,7 +293,7 @@ public class B extends A
 26
 15
 ```
-### this关键字
+##### this关键字
 
 this关键字是Java中的保留关键字，用于引用当前的类实例变量.this关键字还可以调用当前类的方法和构造函数.也可以在方法或构造函数调用中将其作为参数传递.
 
@@ -324,7 +322,7 @@ public class Demo
 250
 120
 ```
-#### 12.Java中的序列化与反序列化#### 
+#### 12.Java中的序列化与反序列化
 
 Java中的序列化涉及将对象状态写入字节流，以便可以将其发送到数据库或磁盘.反序列化是逆向过程，其中流被转换为对象.
 
@@ -363,7 +361,7 @@ public class Demo
 
 251 Jason Scott
 ```
-#### 13.停止Java中的线程#### 
+#### 13.停止Java中的线程
 
 在Java中停止线程可能有点复杂，因为没有有效的stop方法.这与在Java中启动线程完全不同，因为有可用的start（）方法.首次发布Java时，Thread类中有一个stop（）方法，但此方法已被弃用.
 
@@ -410,7 +408,7 @@ main is finished now
 ```
 
 
-#### 14 为什么Java中的字符串是不可变的？#### 
+#### 14 为什么Java中的字符串是不可变的？
 
 Java中的字符串是不可变的.这意味着它们不可更改或不可修改.有几个原因.其中一些如下：
 
@@ -445,7 +443,7 @@ Snow
 在上述程序中，仅打印Snow，因为Strings是不可变的对象.
 
 
-#### 15.Java线程如何相互通信？#### 
+#### 15.Java线程如何相互通信？
 
 线程间通信涉及Java线程之间的通信.Java的三种用于实现线程间通信的方法如下：
 
@@ -509,7 +507,7 @@ The balance amount is: 5000
 Depositing money
 The balance amount is: 7000
 ```
-#### 16.避免在Java中死锁？#### 
+#### 16.避免在Java中死锁？
 
 死锁是通常在多线程或多任务处理中发生的情况.这意味着两个或更多线程正在无限期地等待彼此释放它们完成执行所需的资源.
 
@@ -529,7 +527,7 @@ The balance amount is: 7000
 
 如果一个线程正在等待另一个线程，则会发生死锁.因此，如果死锁条件出现在执行所需的最长时间内，则可以使用Thread.join.
 
-#### 17.Java中的多捕获块#### 
+#### 17.Java中的多捕获块
 
 在Java 7之前，当我们需要处理多个异常时，我们需要多个catch块来处理这些异常.
 
@@ -632,7 +630,7 @@ $javac Example.java
 $java Example
 Exception caught java.lang.NumberFormatException: For input string: "Hello"
 ```
-#### 18.Java注解#### 
+#### 18.Java注解
 
 Java中的注释是一种形式语法元数据，用于传达有关程序元素（如构造函数，方法，实例变量和类）的其他信息.
 
@@ -726,7 +724,7 @@ java.lang包中包含3个内置注释.他们如下
 | @Target               | 它充当另一个注释的注释           |
 
 
-#### 19.Java 8中的Lambda表达式#### 
+#### 19.Java 8中的Lambda表达式
 
 Java中的Lambda表达式是实现功能接口的表达式.功能接口是只有一种抽象方法的那些接口.
 
@@ -781,7 +779,7 @@ $java Example
 ```
 
 
-#### 20 如何在Java中比较两个字符串#### 
+#### 20 如何在Java中比较两个字符串
 
 **使用比较方法**
 
@@ -868,7 +866,7 @@ $java Example
 false
 true
 ```
-#### 21.重载Java中的main（）方法#### 
+#### 21.重载Java中的main（）方法
 
 Java中的main（）方法很可能会重载，因为它不是地面上的方法.main（）方法与其他任何方法一样，可以像其他方法一样重载.
 
@@ -905,7 +903,7 @@ Hello World
 Hello,2
 ```
 
-#### 22.集合框架中泛型的好处？#### 
+#### 22.集合框架中泛型的好处？
 
 在J2SE 5中引入了泛型来处理类型安全的对象.在泛型的强制下，只能将特定类型的对象存储在Collection中.
 
@@ -938,7 +936,7 @@ l.add(98);            // This will lead to a Compile Time Error
 泛型导致类型安全，因为只能在其中保留一种类型的对象.这意味着不允许使用其他类型的对象.
 
 
-#### 23.Java中ClassLoader的作用#### 
+#### 23.Java中ClassLoader的作用
 
 编译后，Java类以字节代码的形式存储在.class文件中.需要时，ClassLoader将Java程序的类加载到内存中.
 
@@ -968,7 +966,7 @@ class loader for DNSNameService: sun.misc.Launcher$ExtClassLoader@5c647e05
 class loader for HashMap: null
 ```
 
-#### 24.用Java确定给定日期的星期几#### 
+#### 24.用Java确定给定日期的星期几
 
 在Java中，Calendar.DAY\_OF\_WEEK常量用于获取星期几.
 
@@ -988,7 +986,7 @@ public class Example {
 Sun Dec 16 21:32:34 UTC 2018
 Day = 1
 ```
-#### 25.反转Java中的整数#### 
+#### 25.反转Java中的整数
 
 反转整数涉及反转其所有数字.下面是一个示例：
 
@@ -1020,7 +1018,7 @@ Reverse of the above number is 3142
 
 在上面的程序中，数字2413使用while循环反转，结果存储在rev中，然后显示出来.
 
-#### 26.检查Java中的溢出#### 
+#### 26.检查Java中的溢出
 
 当给变量分配的值大于该变量的最大允许值时，就会发生溢出.如果发生溢出，JVM不会抛出任何异常，并且程序员有责任处理溢出情况.
 
