@@ -158,10 +158,7 @@ MongoDB是一种非结构化（至少在定义上）的分布式文档存储.出
 
 要检查Redis是否正在运行，请尝试以下代码：
 ```
-try
-
-{
-
+try{
     $redis = new Redis ();
 
     $redis->connect (‘127.0.0.1’, 6379);
@@ -169,15 +166,8 @@ try
     echo “Redis is running.”;
 
     echo “Server is running: ” . $redis->ping();
-
-}
-
-catch (Exception $e)
-
-{
-
+}catch (Exception $e){
     echo $e->getMessage();
-
 }
 ```
 ##### [如何在Redis中设置多个值（数组）？](#)

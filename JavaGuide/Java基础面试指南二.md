@@ -1,14 +1,14 @@
-#### [1\. Java是否完全面向对象？](#collapse-beginner-630)
+#### 1. Java是否完全面向对象？
 
 Java支持面向对象范例中的编程，但是它不是完全面向对象的.Java具有一组原始数据类型-字节，短型，字符，整数，长型，浮点型，双精度型，布尔型.此类型的任何变量都不是对象.这就是Java不纯粹是面向对象的原因. 
 
 
-#### [2\. 包装器类的目的是什么？](#collapse-beginner-631)
+#### 2. 包装器类的目的是什么？
 
 包装器类包装原始数据类型以将它们作为对象引入.原始值不是对象，开发人员需要编写许多样板代码以将它们彼此转换并在集合中使用它们.为了克服这些问题，Java引入了包装器类.这些类提供了用于数据类型转换的多态API和诸如hashCode（）和equals（）之类的实用程序方法.这些使值在面向对象的环境中非常有用. 
 
 
-#### [3\. 什么是多态性？](#collapse-beginner-632)
+#### 3. 什么是多态性？
 
 多态性是面向对象编程范式的一个属性，它表示对象或方法在不同的上下文中可以具有不同的形式.在Java中，我们可以根据其参数在具有不同实现的类中定义一个方法.这样，当客户端代码使用具有不同参数集的相同接口调用该方法时，但在内部它决定需要调用哪种实现.让我们举个例子： 
 
@@ -32,7 +32,7 @@ class AreaCalculator {
 如您所见，在AreaCalculator类中，calculate（）有单独的实现，但是从客户端的角度来看，接口是相同的. 
 
 
-#### [4.用Java有多少种方法可以创建对象？](#collapse-beginner-633)
+#### 4.用Java有多少种方法可以创建对象？
 
 我们可以通过几种方法在Java中创建对象. 
 
@@ -58,7 +58,7 @@ ObjectInputStream is= new ObjectInputStream（anIStream）;
 MyClass o =（MyClass）is.readObject（）; 
 ```
 
-#### [5\. 什么是运行时多态？](#collapse-beginner-634)
+#### 5. 什么是运行时多态？
 
 多态或静态多态决定在编译时需要调用哪个方法，并将方法调用与调用绑定在一起.但是，在某些情况下静态绑定不起作用.众所周知，父类引用可以指向父对象以及子对象.现在，如果在父类和子类中都存在一个具有相同签名的方法，并且我们从父类引用中调用该方法，则编译器无法确定该方法与该调用绑定.这将取决于引用在运行时所指向的对象类型.如果引用指向父对象，则将调用父类中的方法.如果指向的对象是Child类的实例，则将调用child类实现.这就是为什么将其称为动态绑定或运行时多态性，并且据说子类方法已覆盖父类方法.让我们举个例子：
 ```
@@ -83,22 +83,22 @@ a.makeSound();
 如果运行代码段，我们会发现a.makeSound（）根据引用指向的对象类型打印不同的消息.请注意，子类中需要Override批注，以通知编译器此方法将覆盖父实现. 
 
 
-#### [6\. StringBuffer和StringBuilder有什么区别？](#collapse-beginner-635)
+#### 6. StringBuffer和StringBuilder有什么区别？
 
 StringBuffer和StringBuilder公开相同类型的API以构建String，它们都是可变类.但是，它们之间有很大的不同.StringBuffer是线程安全的，这意味着它可以用作多个线程之间的共享对象.另一方面，StringBuilder不是线程安全的，如果没有适当的同步技术，则不允许多个线程修改StringBuilder.这就是StringBuilder比StringBuffer更快的原因.在需要构建方法本地或特定线程本地的String对象的情况下，我们应该使用StringBuilder而不是StringBuffer. 
 
 
-#### [7\. 接口和抽象类之间有什么区别？什么时候我们应该比抽象类更喜欢接口？](#collapse-beginner-636)
+#### 7. 接口和抽象类之间有什么区别？什么时候我们应该比抽象类更喜欢接口？
 
 一个类既可以继承抽象类又可以继承接口，但是有一些区别.一个类只能扩展一个抽象类，而可以实现多个接口.接口不能具有构造函数，而抽象类可以具有子类需要在其构造函数中调用的构造函数.抽象类可能包含子类可以访问以更改其状态的字段.另一方面，接口只能包含最终变量.因此，抽象类允许子类继承状态和行为，而接口主要用于在子类中实现一组行为.如果父级和子级之间存在直接IS-A关系，则应该首选抽象类.当不同的实现具有大多数常见行为并由抽象类定义时，我们将使用抽象类.在将公共API公开给客户端代码以及类在不同上下文中的行为不同时，最好使用接口. 
 
 
-#### [8\. Java是否支持多重继承？](#collapse-beginner-637)
+#### 8. Java是否支持多重继承？
 
 Java不完全支持多重继承，因为一个类只能扩展一个类.不支持此功能，因为如果另一个父类中存在相同的成员，则这可能导致在访问继承的字段或方法时产生歧义.但是，该工具是通过接口部分提供的. 
 
 
-#### [9\. Class上的静态成员对您有什么了解？](#collapse-beginner-638)
+#### 9. Class上的静态成员对您有什么了解？
 
 如果成员不依赖于该类的任何实例，即独立于任何对象，则将其声明为静态成员.这些成员绑定到类型，通常使用类型名称（而不是对象引用）进行访问.静态方法和字段在类的所有对象之间共享，并且可以从任何一个对象中访问，而我们不能从静态方法访问非静态成员.由于静态方法未绑定到对象，因此无法覆盖它们.静态字段是通过静态块初始化的，该静态块在类加载器加载类时执行.让我们来看一个例子： 
 
@@ -130,24 +130,24 @@ public class Countable {
 // should print 2 
 ```
 
-#### [10\. ArrayList和LinkedList有什么区别？](#collapse-beginner-639)
+#### 10. ArrayList和LinkedList有什么区别？
 
 ArrayList和LinkedList都是列表，但内部实现不同.ArrayList在内部使用一个数组来存储添加到其中的元素.当元素的数量即将超过数组的大小时，它将分配一个新的数组并将元素复制到新的位置.它为添加（如果不需要扩展）和获取元素提供恒定的时间访问时间，但是对于删除，由于需要将其元素向左移动，它提供了线性的时间复杂度.另一方面，LinkedList在内部维护用于存储元素的一系列链接节点.因此，以线性时间检索元素，而添加和删除则需要一定的时间才能执行.
 
 
-#### [11\. HashTable和HashMap有什么区别？](#collapse-beginner-640)
+#### 11. HashTable和HashMap有什么区别？
 
 HashTable和HashMap都存储键-值对，并花费固定的时间进行放置或获取操作.但是，Hashtable是同步的，可以共享以供多个线程修改，而HashMap不同步且性能更好，但不适合作为共享对象的多线程环境.HashTable不允许Null键或值，但HashMap允许Null键和多个Null值.
 
 
-#### [12\. 如何从HashMap检索值？](#collapse-beginner-641)
+#### 12. 如何从HashMap检索值？
 
 为了检索或存储值，HashMap使用其Key类的两个方法-hashCode（）和equals（）.HashMap将其条目存储在大量的存储桶中，可以使用索引对其进行随机访问.要检索值，首先，将调用Key的hashCode（）方法以获取哈希值.此哈希值用于标识将从中检索值的存储桶.在存储条目时，可能存在某些情况，其中多个密钥计算出的哈希值相同.这导致在同一存储桶中输入多个键值对. 
 
 存储桶将其条目保留为链接列表.因此，在检索时，在找到适当的存储桶之后，需要遍历此链接列表以找到密钥的实际条目.这次，equals（）方法用于比较列表中每个条目的键.一旦找到相等的键，则返回条目中的值.这两个方法之间有一个约定，即如果两个对象基于equals（）方法相等，则它们的hashCode（）值必须相同.因此，如果我们计划将类的对象用作HashMap的键，则应该覆盖方法hashCode（）和equals（），以便保持此协定. 
 
 
-#### [13. 什么是Java中的public static void main（String args []）](#collapse-beginner-1892)
+#### 13. 什么是Java中的public static void main（String args []）
 
 公共静态void main（String args []）是Java程序的主要方法.它是任何Java程序的入口.没有main方法，则无法执行Java程序.
 
@@ -166,7 +166,7 @@ public static void main(String args[])
 *   **String args []**：main方法可以接受一个String类型的参数.它们也称为命令行参数.在main方法编写的代码中，可以将它们用作常规参数来使用和操纵.它们与执行语句一起编写.
 
 
-#### [14在Java中创建自定义异常](#collapse-beginner-1900)
+#### 14. 在Java中创建自定义异常
 
 自定义异常只不过是用户定义的异常.Java自定义异常用于根据用户的要求进行和修改异常.
 
@@ -215,7 +215,7 @@ Outside the try-catch block
 ```
 
 
-#### [14 公共静态void main（String args []）中的“ static”是什么意思？](#collapse-beginner-1907)
+#### 14 公共静态void main（String args []）中的“ static”是什么意思？
 
 公共静态void main（String args []）是Java程序的主要方法.这是最重要的Java方法.它是任何Java程序的入口.没有main方法，则无法执行Java程序.
 
@@ -239,7 +239,7 @@ Error: Main method is not static in class Example, please define the main method
   public static void main(String[] args)
 ```
 
-#### [15 Java中的ByteCode](#collapse-beginner-1908)
+#### 15 Java中的ByteCode
 
 在编译期间，Java编译器会将源代码转换为ByteCode.
 
@@ -256,7 +256,7 @@ Java虚拟机提供了执行字节码所需的组件，该虚拟机调用处理�
 代码段是保存ByteCode的内存段.
 
 
-#### [16.Java中的编译时vs运行时多态](#collapse-beginner-1911)
+#### 16.Java中的编译时vs运行时多态
 
 以下是比较：
 | 基础 | 编译时多态        | 运行时多态        |
@@ -331,7 +331,7 @@ SuperClass
 Subclass
 ```
 
-#### [17.Java中的字符串池](#collapse-beginner-1912)
+#### 17.Java中的字符串池
 
 Java中的字符串池是存储在Java堆内存中的字符串池或字符串集合.使用双引号初始化String时，它将首先在String池中搜索具有相同值的String.如果匹配，则仅返回引用，否则，它将在字符串池中生成一个新的字符串，然后返回其引用.
 
@@ -361,7 +361,7 @@ Do s1 and s2 have the same address? true
 Do s1 and s2 have the same address? false
 ```
 
-#### [18 如果我写System.exit（0）; 在try块的末尾，是否会继续执行finally块？](#collapse-beginner-1913)
+#### 18 如果我写System.exit（0）; 在try块的末尾，是否会继续执行finally块？
 
 不，finally块将不会执行.System.exit（）方法是java.lang包的预定义方法.通过终止Java虚拟机的运行，它将退出当前程序.
 
@@ -403,7 +403,7 @@ $java Example
 In try block
 ```
 
-#### [19.什么时候调用类的构造函数？](#collapse-beginner-1914)
+#### 19.什么时候调用类的构造函数？
 
 创建对象时将调用类的构造函数.每次使用**new**关键字创建对象时，都会调用构造函数.构造函数初始化同一类的数据成员.
 ```
@@ -439,7 +439,7 @@ $java Example
 This is a constructor
 ```
 
-#### [20.Thread类的yield方法](#collapse-beginner-1916)
+#### 20.Thread类的yield方法
 
 Thread类的yield（）方法用于暂时停止线程的执行并执行.
 
@@ -487,7 +487,7 @@ main in control
 ```
 每个系统的输出可能不同，但是yield（）线程执行的可能性更大.
 
-#### [22.final，finalize和final之间有什么区别？](#collapse-beginner-1920)
+#### 22.final，finalize和final之间有什么区别？
 
 final，finalize和final 之间有很多差异.
 
@@ -570,7 +570,7 @@ $java Example
 End of main method
 ```
 
-#### [23.用Java生成随机数](#collapse-beginner-1929)
+#### 23.用Java生成随机数
 
 Java为我们提供了三种生成随机数的方法.三种方式是：
 
@@ -656,7 +656,7 @@ A random integer : 1700060375
 A random double number : 0.24593329857940383
 ```
 
-#### [24.JVM分配的内存区域类型](#collapse-beginner-1945)
+#### 24.JVM分配的内存区域类型
 
 JVM代表Java虚拟机.是提供运行时环境的驱动力.它将Java ByteCode转换为机器代码.它是一种抽象机器，提供了在运行时执行Java程序的规范.
 
@@ -672,7 +672,7 @@ JVM中通常分配6种类型的内存区域.
 *   **本机方法堆栈**：它是应用程序中使用的所有本机方法的集合.
 
 
-#### [25.Java中finalize（）的目的](#collapse-beginner-1946)
+#### 25.Java中finalize（）的目的
 
 finalize（）是一种用于在Java中进行垃圾回收之前清理处理的方法.没有对象的进一步引用时，该对象将由该对象的垃圾收集器调用.
 
@@ -706,7 +706,7 @@ End of main method
 ```
 
 
-#### [26.什么是JIT编译器？](#collapse-beginner-1948)
+#### 26.什么是JIT编译器？
 
 JIT代表准时制.JIT编译器是将Java ByteCode转换为处理器级指令的程序.
 
@@ -720,7 +720,7 @@ JIT编译器与程序执行同时运行.它将字节码编译为立即执行的�
 
 
 
-#### [27.Java中的NumberFormatException](#collapse-beginner-1950)
+#### 27.Java中的NumberFormatException
 
 Java中的NumberFormatException是java.lang包的异常，当我们尝试将String转换为数字数据类型（例如int，float，double，long和short）时，抛出该异常.当字符串没有适当的格式时，会发生这种情况.
 
@@ -765,7 +765,7 @@ $java -Xmx128M -Xms16M Example
 12
 ```
 
-#### [28.用Java打印堆栈跟踪信息](#collapse-beginner-1953)
+#### 28.用Java打印堆栈跟踪信息
 
 堆栈跟踪是特定时刻调用堆栈的特征，每个元素都描述一个方法调用语句.堆栈跟踪包含从线程开始到生成异常为止的所有调用语句.
 
@@ -802,7 +802,7 @@ java.lang.ArithmeticException: / by zero
 at Example.main(Example.java:11)
 ```
 
-#### [29.在Java中将十六进制数转换为十进制数](#collapse-beginner-1955)
+#### 29.在Java中将十六进制数转换为十进制数
 
 parseInt（）方法将十六进制转换为十进制.它甚至可以将八进制转换为十进制.您只需要设置基数即可.对于十六进制，基数为16.  
   
@@ -824,7 +824,7 @@ public class Demo
 Decimal = 664
 ```
 
-#### [30.我们如何从Java中的当前时间减去小时？](#collapse-beginner-1956)
+#### 30.我们如何从Java中的当前时间减去小时？
 
 要减去小时数，您需要使用HOUR\_OF\_DAY常量.在其中包括带负号的数字.这就是您要减少的时间.所有这些都是在Calendar add（）方法下完成的.
 
@@ -847,7 +847,7 @@ Date : Sun Dec 16 16:28:53 UTC 2018
 After subtracting 2 hrs : Sun Dec 16 14:28:53 UTC 2018
 ```
 
-#### [31.如何在Java中添加前导零？](#collapse-beginner-1958)
+#### 31.如何在Java中添加前导零？
 
 我们可以在Java中将前导零添加到数字中.让我们看看如何：
 
@@ -873,7 +873,7 @@ Value = 15
 Updated = 00000015
 ```
 
-#### [32.如何在Java中用逗号（，）分割字符串](#collapse-beginner-1960)
+#### 32.如何在Java中用逗号（，）分割字符串
 
 split（）方法用于根据正则表达式拆分字符串.第一个参数是相同的正则表达式，而如果第二个参数为零，则它返回所有与正则表达式匹配的字符串.
 
@@ -903,7 +903,7 @@ The TV
 and the remote
 ```
 
-#### [33.Java中是否存在sizeof？](#collapse-beginner-1961)
+#### 33.Java中是否存在sizeof？
 
 不，Java中不存在sizeof运算符.
 
@@ -956,7 +956,7 @@ float: 4 bytes
 double: 8 bytes
 ```
 
-#### [34.什么是Java语言环境类](#collapse-beginner-1981)
+#### 34.什么是Java语言环境类
 
 语言环境类用于执行语言环境操作，并将语言环境信息提供给客户端或用户.
 
@@ -1009,11 +1009,11 @@ Latvian (lv)
 Danish (Denmark) (da\_DK)
 ```
 
-#### [35.
+#### 35.
 
 如何制作单身人士课程
 
-](#collapse-beginner-1982)
+
 
 Singleton类是只有一个对象的类.这意味着您只能实例化该类一次，当我们将该类的构造函数声明为private时，它将限制对象创建的范围;如果我们将该对象的实例返回给静态方法，则可以处理类本身内部的对象创建.
 
@@ -1051,7 +1051,7 @@ public class Example {
 }
 ```
 
-#### [36 Java异常类的层次结构](#collapse-beginner-1983)
+#### 36 Java异常类的层次结构
 
 Java中的异常是java.lang.Exception类的一部分.这是在程序执行期间出现的一个问题.
 
@@ -1062,7 +1062,7 @@ Throwable类的另一个子类是java.lang.Error类.错误是由于许多失败�
 ![Java中的异常Java异常类](https://d2o2utebsixu4k.cloudfront.net/media/images/1557206157504-Image19.jpg)
 
 
-#### [37.Java中InputStream和OutputStream的层次结构](#collapse-beginner-1989)
+#### 37.Java中InputStream和OutputStream的层次结构
 
 InputStream是java.io包的抽象类.它是以字节序列的形式与输入有关的所有子类的父类.
 
@@ -1085,7 +1085,7 @@ OutputStream是java.io包的抽象类.它是父级中与输入有关的所有子
 *   ObjectOutputStream将原始对象，数据类型和图形写入OutputStream.
 
 
-#### [38.JDK，JRE和JVM的作用](#collapse-beginner-1990)
+#### 38.JDK，JRE和JVM的作用
 
 Java中有关JDK，JRE和JVM的详细信息如下：
 
@@ -1123,7 +1123,7 @@ JVM执行的一些操作如下：
 
 
 
-#### [38.Java中的堆空间](#collapse-beginner-1996)
+#### 38.Java中的堆空间
 
 Java运行时将Java中的堆空间分配给对象和JRE类.应用程序中的所有对象都是在堆空间中创建的.堆空间中的对象可从应用程序中的任何位置全局访问，因此它们对于整个应用程序执行都有生命周期.
 
@@ -1156,7 +1156,7 @@ Java中堆空间的一些重要功能如下：
 4.  堆栈内存的生存时间相对较短，而堆内存存在于整个应用程序执行过程中.
 5.  堆栈内存管理是使用LIFO完成的，但是对于堆内存来说，它更为复杂，因为整个应用程序都在使用它.
 
-#### [39.Java中的垃圾回收](#collapse-beginner-2001)
+#### 39.Java中的垃圾回收
 
 Java中的Garbage集合将销毁所有不再使用的对象.因此，基本上，垃圾回收通过删除无法访问的对象（即没有任何引用的对象）来帮助释放堆内存.
 
@@ -1196,7 +1196,7 @@ The garbage collector is called...
 The object that is garbage collected is: Demo@7978f9b4
 ```
 
-#### [40.Java equals（）方法vs ==运算符](#collapse-beginner-2002)
+#### 40.Java equals（）方法vs ==运算符
 
 Java中的equals（）方法和==运算符都用于查找两个对象是否相等.但是，虽然equals（）是一种方法，但==是运算符.同样，equals（）比较对象值，而==检查对象是否指向相同的内存位置.
 
@@ -1240,7 +1240,7 @@ true
 false
 ```
 
-#### [88.Java中的线程生命周期](#collapse-beginner-2003)
+#### 88.Java中的线程生命周期
 
 Java中的线程生命周期包含5个状态.这意味着线程可以处于这5种状态中的任何一种.下面给出了一个了解线程生命周期状态的图表：
 
@@ -1269,7 +1269,7 @@ Java中的线程生命周期包含5个状态.这意味着线程可以处于这5�
 当线程的run（）方法退出时，它处于终止状态.
 
 
-#### [90Java中的Throw vs Throws关键字](#collapse-beginner-2005)
+#### 90Java中的Throw vs Throws关键字
 
 Java中的throw和throws关键字都与异常处理相关.这两个关键字之间的区别如下：
 
@@ -1323,11 +1323,11 @@ public class Demo
 Demonstration of throws keyword
 ```
 
-#### [91.Java 11的新功能](#collapse-beginner-2209)
+#### 91.Java 11的新功能
 
 Java 11的一些新功能如下：
 
-**1\. Lambda参数的局部变量语法**
+**1. Lambda参数的局部变量语法**
 
 JDK 10引入了Local-Variable Type Inference，它简化了代码，因为不需要显式声明局部变量的类型.JEP 32扩展了此语法，以用于Lambda表达式的参数.
 
@@ -1335,7 +1335,7 @@ JDK 10引入了Local-Variable Type Inference，它简化了代码，因为不需
 
 Java被批评为一种非常复杂的语言.但是，JEP 330通过消除编译单个文件应用程序的需求，将其简化了一点.
 
-**3\. HTTP客户端（标准）**
+**3. HTTP客户端（标准）**
 
 Java SE 11标准包含HTTP客户端API作为其一部分.引入了新的模块和包，即java.net.http.在此定义的一些主要类型如下：
 
